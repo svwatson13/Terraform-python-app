@@ -1,6 +1,4 @@
 #!/bin/bash
 
 cd /home/ubuntu/app
-npm install
-npm start
-exit
+python3 main.py
