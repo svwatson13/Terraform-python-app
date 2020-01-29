@@ -27,7 +27,7 @@ resource "aws_security_group" "app_security" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["212.161.55.68/32"]
   }
   egress {
     from_port       = 0
@@ -86,7 +86,6 @@ data "template_file" "app_init" {
 }
 
 # Launch an instance
-
 resource "aws_instance" "app_init" {
   ami           = var.ami
   subnet_id     = aws_subnet.app_subnet.id
